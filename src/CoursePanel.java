@@ -9,7 +9,7 @@ public class CoursePanel extends JPanel {
     JLabel courseLabel, codeLabel;
     JTextField courseField,codeField;
     JButton addButton;
-    JTable table;
+    JTable table2;
     JScrollPane scrollPane;
     DefaultTableModel tableModel;
 
@@ -41,9 +41,9 @@ public class CoursePanel extends JPanel {
         this.add(addButton = new JButton("Add"),c);
 
         add(0,3,2,1,c);
-        this.add(table = new JTable(tableModel),c);
-
-        scrollPane = new JScrollPane(table);
+        c.weighty = 10;
+        this.add(table2 = new JTable(tableModel),c);
+        scrollPane = new JScrollPane(table2);
         this.add(scrollPane,c);
 
 //        pack();
@@ -82,8 +82,8 @@ public class CoursePanel extends JPanel {
         c.gridwidth = gridWidth;
         c.gridheight = gridHeight;
         c.weightx = 1;
+        c.weighty = 1;
         c.fill = GridBagConstraints.BOTH;
-        c.insets = new Insets(5, 5, 5, 5);
 
     }
 }

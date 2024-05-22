@@ -40,6 +40,7 @@ public class StudentsPanel extends JPanel {
         this.add(addButton = new JButton("Add"),c);
 
         add(0,3,2,1,c);
+        c.weighty = 10;
         this.add(table = new JTable(tableModel),c);
 
         scrollPane = new JScrollPane(table);
@@ -82,8 +83,8 @@ public class StudentsPanel extends JPanel {
         c.gridwidth = gridWidth;
         c.gridheight = gridHeight;
         c.weightx = 1;
+        c.weighty = 1;
         c.fill = GridBagConstraints.BOTH;
-        c.insets = new Insets(5, 5, 5, 5);
 
     }
 }
